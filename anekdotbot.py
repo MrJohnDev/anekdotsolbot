@@ -45,7 +45,6 @@ def postarticles(mas):
         if row is None:
             cursor.execute('INSERT INTO anekdots (anekdot) VALUES (?)', (news,))
             conn.commit()
-            print(news+'\n')
             bot.send_message(CHANNEL_NAME, news)
             time.sleep(2)
             
